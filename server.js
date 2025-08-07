@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.use(cors({
-    origin: 'https://puntodeagua.onrender.com', 
+    origin: 'https://puntodeagua-inicio.onrender.com', 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
