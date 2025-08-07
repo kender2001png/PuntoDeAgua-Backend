@@ -1023,8 +1023,7 @@ app.get('/api/admin/ventas/resumen', async (req, res) => {
 });
 
 
-// La variable de entorno PORT es proporcionada por Render
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
     console.log(`Servidor backend escuchando en el puerto ${process.env.PORT || 3000}`);
     console.log('El pool de conexiones a la base de datos se inicializa, pero las conexiones individuales se establecen bajo demanda.');
 });
