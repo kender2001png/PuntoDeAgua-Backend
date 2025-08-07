@@ -1023,9 +1023,9 @@ app.get('/api/admin/ventas/resumen', async (req, res) => {
 });
 
 
-app.listen(port, () => {
-    console.log(`Servidor backend escuchando en http://localhost:${port}`);
+// La variable de entorno PORT es proporcionada por Render
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Servidor backend escuchando en el puerto ${process.env.PORT || 3000}`);
     console.log('El pool de conexiones a la base de datos se inicializa, pero las conexiones individuales se establecen bajo demanda.');
-    console.log('Para probar la conexión a la DB, visita http://localhost:3000 en tu navegador.');
 });
 
