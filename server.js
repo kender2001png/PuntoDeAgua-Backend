@@ -12,7 +12,9 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.use(cors({
-    origin: '*' // ¡ADVERTENCIA: NO USAR EN PRODUCCIÓN! Esto es para desarrollo.
+    origin: 'https://puntodeagua-inicio.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
 // Configuración del pool de la base de datos
